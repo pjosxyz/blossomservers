@@ -1,0 +1,50 @@
+{
+  "name": "blossomservers",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "format": "prettier --ignore-path .prettierignore -w .",
+    "analyze": "pnpm dlx vite-bundle-visualizer -o ./stats.html"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "applesauce-core": "0.0.0-next-20241128172721",
+    "applesauce-react": "0.0.0-next-20241128172721",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "hash-sum": "^2.0.0",
+    "lucide-react": "^0.462.0",
+    "nanoid": "^5.0.9",
+    "nostr-tools": "^2.10.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
+    "react-rating": "^2.0.5",
+    "rx-nostr": "^3.4.1",
+    "rx-nostr-crypto": "^3.1.2",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "window.nostr.js": "^0.4.6"
+  },
+  "devDependencies": {
+    "@types/hash-sum": "^1.0.2",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "globals": "^15.12.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.1",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  }
+}
