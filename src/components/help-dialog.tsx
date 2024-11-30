@@ -33,7 +33,7 @@ export function HelpDialog() {
           Reviews are a <code>kind:{SERVER_REVIEW_KIND}</code> event with a "<code>d</code>" tag containing the server
           URL and following{" "}
           <a href="https://github.com/nostr-protocol/nips/pull/879" target="_blank" className="text-blue-500">
-            NIP-78 (reviews)
+            NIP-85 (reviews)
           </a>{" "}
           nip
         </p>
