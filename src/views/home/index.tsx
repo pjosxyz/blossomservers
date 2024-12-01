@@ -4,8 +4,8 @@ import { useStoreQuery } from "applesauce-react/hooks";
 import Header from "@/components/layout/header";
 import { SERVER_ADVERTIZEMENT_KIND, SERVER_REVIEW_KIND } from "@/const";
 import useSubscription from "@/hooks/use-subscription";
+import { ServersTable } from "@/components/servers-table/index";
 
-import ServersTable from "../../components/servers-table";
 
 export default function HomeView() {
   useSubscription("servers", { kinds: [SERVER_ADVERTIZEMENT_KIND] });
@@ -16,7 +16,6 @@ export default function HomeView() {
   return (
     <>
       <Header />
-
       <ServersTable servers={servers} />
     </>
   );

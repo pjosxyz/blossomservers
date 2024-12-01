@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 
+
 export default function Layout({ children }: PropsWithChildren) {
-  return <div className="container mx-auto">{children}</div>;
+  return <main className="mx-auto sm:px-4">{children}</main>;
 }
