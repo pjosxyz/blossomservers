@@ -9,7 +9,7 @@ import { NostrEvent } from "nostr-tools";
 import { SERVER_ADVERTIZEMENT_KIND, SERVER_REVIEW_KIND } from "../../const";
 import Header from "../../components/layout/header";
 import { Button } from "../../components/ui/button";
-import { AddReviewDialog } from "../../components/add-review";
+import { AddReview } from "../../components/add-review";
 import CopyButton from "../../components/copy-button";
 import { Avatar, AvatarFallback } from "../../components/ui/avatar";
 import getReviewRating from "../../helpers/review";
@@ -77,7 +77,7 @@ export default function ServerDetailsView() {
 
       <div className="flex gap-2 pt-2">
         <h3 className="text-2xl">Reviews ({reviews?.length})</h3>
-        <AddReviewDialog server={url} />
+        <AddReview server={url} />
       </div>
 
       <div className="flex flex-col gap-2">

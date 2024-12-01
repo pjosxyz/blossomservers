@@ -18,7 +18,7 @@ import { rxNostr } from "../core";
 import { SERVER_REVIEW_KIND } from "../const";
 import { Textarea } from "./ui/textarea";
 
-export function AddReviewDialog({ server }: { server: URL }) {
+export function AddReview({ server }: { server: URL }) {
   const form = useForm({
     defaultValues: {
       content: "",
@@ -49,7 +49,9 @@ export function AddReviewDialog({ server }: { server: URL }) {
   return (
     <Dialog onOpenChange={() => form.reset()}>
       <DialogTrigger asChild>
-        <Button variant="outline">Add Review</Button>
+        <Button variant="outline" className="self-end">
+          Add Review
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>

@@ -9,7 +9,7 @@ import Rating from "react-rating";
 
 import { SERVER_REVIEW_KIND } from "../../../const";
 import { TableCell, TableRow } from "../../../components/ui/table";
-import { AddReviewDialog } from "../../../components/add-review";
+import { AddReview } from "../../../components/add-review";
 import { Button } from "../../../components/ui/button";
 import CopyButton from "../../../components/copy-button";
 
@@ -70,7 +70,7 @@ export default function ServerRow({ server }: { server: NostrEvent }) {
         <Button variant="link" onClick={() => window.open(url, "_blank")}>
           Open <ExternalLink size="1.2em" />
         </Button>
-        <AddReviewDialog server={url} />
+        <AddReview server={url} />
       </TableCell>
     </TableRow>
   );
