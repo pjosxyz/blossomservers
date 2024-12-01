@@ -1,3 +1,7 @@
+import { useForm } from "react-hook-form";
+import { Star } from "lucide-react";
+import Rating from "react-rating";
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -9,17 +13,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { useForm } from "react-hook-form";
-import Rating from "react-rating";
 
 import { rxNostr } from "../core";
 import { SERVER_REVIEW_KIND } from "../const";
 import { Textarea } from "./ui/textarea";
-import { NostrEvent } from "nostr-tools";
-import { getTagValue } from "applesauce-core/helpers";
-import { Star } from "lucide-react";
 
-export function AddReview({ server }: { server: NostrEvent }) {
+export function AddReviewDialog({ server }: { server: URL }) {
   const form = useForm({
     defaultValues: {
       content: "",
@@ -28,10 +27,8 @@ export function AddReview({ server }: { server: NostrEvent }) {
     mode: "all",
   });
 
-  const d = getTagValue(server, "d");
-
   const submit = form.handleSubmit(async (values) => {
-    const url = new URL("/", d!).toString();
+    const url = new URL("/", server).toString();
 
     if (values.rating === 0) {
       return alert("Select rating first");
@@ -49,8 +46,6 @@ export function AddReview({ server }: { server: NostrEvent }) {
 
   form.watch("rating");
 
-  if (!d) return null;
-
   return (
     <Dialog onOpenChange={() => form.reset()}>
       <DialogTrigger asChild>
@@ -59,9 +54,7 @@ export function AddReview({ server }: { server: NostrEvent }) {
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle>Add Review</DialogTitle>
-          <DialogDescription>
-            Review {getTagValue(server, "name")} ({d})
-          </DialogDescription>
+          <DialogDescription>Review {server.host}</DialogDescription>
         </DialogHeader>
         <form id="add-server" className="grid gap-4" onSubmit={submit}>
           <div className="flex flex-col gap-2">
