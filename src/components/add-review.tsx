@@ -54,7 +54,7 @@ export function AddReview({ server }: { server: NostrEvent }) {
   return (
     <Dialog onOpenChange={() => form.reset()}>
       <DialogTrigger asChild>
-        <Button variant="outline">Add Review</Button>
+        <Button variant="outline" className="self-end">Add Review</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
