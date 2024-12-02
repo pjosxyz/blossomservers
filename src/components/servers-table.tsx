@@ -14,6 +14,7 @@ import { AddReview } from "./add-review";
 import CopyButton from "./copy-button";
 import { Button } from "./ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { Link } from "react-router-dom";
 
 type Servers =
   | {
@@ -38,7 +39,7 @@ function ServersTable({ servers }: { servers: Servers }) {
           <TableRow>
             <TableHead>Name</TableHead>
             <TableHead>Rating</TableHead>
-            <TableHead>Domain</TableHead>
+            <TableHead>URL</TableHead>
             <TableHead></TableHead>
           </TableRow>
         </TableHeader>
@@ -114,7 +115,11 @@ function DesktopServerRow({ rowBackgroundColor, server, average, reviews, url }:
   return (
     <TableRow className={rowBackgroundColor}>
       {/* Name */}
-      <TableCell className="font-medium">{getTagValue(server, "name")}</TableCell>
+      <TableCell className="font-medium">
+        <Link to={`/server/${url.host}`} className="hover:underline">
+          {getTagValue(server, "name")}
+        </Link>
+      </TableCell>
       {/* Rating */}
       <TableCell>
         <div className="flex items-center gap-2">
