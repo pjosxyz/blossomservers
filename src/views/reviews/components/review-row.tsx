@@ -7,6 +7,8 @@ import Rating from "react-rating";
 import { TableCell, TableRow } from "../../../components/ui/table";
 import getReviewRating from "../../../helpers/review";
 import { Link } from "react-router-dom";
+import UserAvatar from "../../../components/user/user-avatar";
+import UserName from "../../../components/user/user-name";
 
 export default function ReviewRow({ review }: { review: NostrEvent }) {
   const url = useMemo(() => new URL(getTagValue(review, "d")!), []);
@@ -14,7 +16,12 @@ export default function ReviewRow({ review }: { review: NostrEvent }) {
 
   return (
     <TableRow>
-      <TableCell>user</TableCell>
+      <TableCell>
+        <div className="flex gap-2 items-center">
+          <UserAvatar pubkey={review.pubkey} />
+          <UserName pubkey={review.pubkey} />
+        </div>
+      </TableCell>
       <TableCell>
         {rating !== null && (
           // @ts-expect-error

@@ -1,6 +1,5 @@
-import { createRxNostr } from "rx-nostr";
+import { createRxNostr, nip07Signer } from "rx-nostr";
 import { verifier } from "rx-nostr-crypto";
-import { nip07Signer } from "rx-nostr";
 import { EventStore, QueryStore } from "applesauce-core";
 
 export const eventStore = new EventStore();
@@ -9,6 +8,7 @@ export const queryStore = new QueryStore(eventStore);
 export const rxNostr = createRxNostr({
   verifier,
   signer: nip07Signer(),
+  connectionStrategy: "lazy-keep",
 });
 
 // send all events to eventStore
@@ -23,7 +23,7 @@ if (import.meta.env.DEV) {
   // @ts-expect-error
   window.eventStore = eventStore;
   // @ts-expect-error
-  window.eventStore = eventStore;
+  window.queryStore = queryStore;
   // @ts-expect-error
   window.rxNostr = rxNostr;
 }

@@ -1,9 +1,10 @@
+import { ReactNode, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { getEventUID, getTagValue } from "applesauce-core/helpers";
 import { TimelineQuery } from "applesauce-core/queries";
 import { useStoreQuery } from "applesauce-react/hooks";
 import { SquareArrowOutUpRight, Star } from "lucide-react";
 import { NostrEvent } from "nostr-tools";
-import { ReactNode, useMemo } from "react";
 
 import { SERVER_REVIEW_KIND } from "@/const";
 import useCheckMobile from "@/hooks/use-check-mobile";
@@ -14,7 +15,6 @@ import { AddReview } from "./add-review";
 import CopyButton from "./copy-button";
 import { Button } from "./ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
-import { Link } from "react-router-dom";
 
 type Servers =
   | {

@@ -1,48 +1,15 @@
 import { Navigate, useParams } from "react-router-dom";
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { TimelineQuery } from "applesauce-core/queries";
 import { useStoreQuery } from "applesauce-react/hooks";
 import { getEventUID, getTagValue } from "applesauce-core/helpers";
-import Rating from "react-rating";
-import { NostrEvent } from "nostr-tools";
 
-import { SERVER_ADVERTIZEMENT_KIND, SERVER_REVIEW_KIND } from "../../const";
-import Header from "../../components/layout/header";
-import { Button } from "../../components/ui/button";
-import { AddReview } from "../../components/add-review";
-import CopyButton from "../../components/copy-button";
-import { Avatar, AvatarFallback } from "../../components/ui/avatar";
-import getReviewRating from "../../helpers/review";
-
-function Review({ review }: { review: NostrEvent }) {
-  const rating = getReviewRating(review);
-
-  return (
-    <div className="flex gap-2 flex-col p-2 border rounded-lg border-gray-300">
-      <div className="flex gap-2 items-center">
-        <Avatar>
-          <AvatarFallback>U</AvatarFallback>
-        </Avatar>
-        <div>User Name</div>
-
-        {rating !== null && (
-          // @ts-expect-error
-          <Rating
-            initialRating={rating * 5}
-            fullSymbol={<Star size="1.2em" fill="currentColor" />}
-            emptySymbol={<Star size="1.2em" />}
-            start={0}
-            stop={5}
-            fractions={5}
-            readonly
-          />
-        )}
-      </div>
-
-      <div>{review.content}</div>
-    </div>
-  );
-}
+import { SERVER_ADVERTIZEMENT_KIND, SERVER_REVIEW_KIND } from "@/const";
+import Header from "@/components/layout/header";
+import { Button } from "@/components/ui/button";
+import { AddReview } from "@/components/add-review";
+import CopyButton from "@/components/copy-button";
+import Review from "./components/review";
 
 export default function ServerDetailsView() {
   const params = useParams();
