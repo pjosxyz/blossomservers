@@ -17,7 +17,7 @@ rxNostr.createAllEventObservable().subscribe((message) => {
 });
 
 // set default relays
-rxNostr.setDefaultRelays(["wss://nostrue.com", "wss://relay.primal.net"]);
+rxNostr.setDefaultRelays(["wss://nostrue.com/", "wss://relay.primal.net/", "wss://nos.lol/", "wss://relay.damus.io/"]);
 
 if (import.meta.env.DEV) {
   // @ts-expect-error
