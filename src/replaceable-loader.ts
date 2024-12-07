@@ -3,7 +3,6 @@ import { eventStore, rxNostr } from "./core";
 
 const replaceableLoader = new ReplaceableLoader(rxNostr, {
   bufferTime: 500,
-  cacheRelays: ["ws://localhost:4869/"],
   lookupRelays: ["wss://purplepag.es/"],
 });
 
