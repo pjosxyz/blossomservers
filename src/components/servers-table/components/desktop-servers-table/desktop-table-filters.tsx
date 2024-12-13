@@ -6,7 +6,7 @@ import {
 import RatingFilter from "@/components/servers-table/components/filters/rating-filter";
 import ReviewsFilter from "../filters/reviews-filter";
 import { Button } from "@/components/ui/button";
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 
 export default function DesktopTableFilters() {
   const { handleResetReviewRatingFilters, rating, numReviews } = useTable();
@@ -26,7 +26,6 @@ export default function DesktopTableFilters() {
         <ReviewsFilter />
         <div className="p-3 flex ">
           <Button
-            variant="primary"
             className="w-full"
             onClick={handleResetFilters}
             disabled={disableResetButton}

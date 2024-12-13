@@ -1,6 +1,6 @@
 import { Slider } from "@/components/ui/slider";
 import FilterCard from "./filter-card";
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 // import { useState } from "react";
 
 export default function ReviewsFilter() {

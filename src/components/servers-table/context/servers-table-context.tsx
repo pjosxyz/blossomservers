@@ -2,7 +2,7 @@ import { ServerData } from "@/types";
 import { ColumnFiltersState, Table } from "@tanstack/react-table";
 import { createContext } from "react";
 
-export type TableContextType = {
+export type ServersTableContextType = {
   table: Table<ServerData>;
   serverNameFilter: string;
   itemsPerPage: number;
@@ -20,4 +20,4 @@ export type TableContextType = {
   numReviews: number[];
 };
 
-export const TableContext = createContext<TableContextType | null>(null);
+export const ServersTableContext = createContext<ServersTableContextType | null>(null);

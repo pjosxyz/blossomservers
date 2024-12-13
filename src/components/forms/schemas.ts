@@ -24,5 +24,5 @@ export const addServerFormSchema = z.object({
       message: `Description can only be ${MAX_DESC} characters long`,
     }),
   isPaid: z.boolean().default(false),
-  isWhiteList: z.boolean().default(false),
+  hasWhitelist: z.boolean().default(false),
 });

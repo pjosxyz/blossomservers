@@ -24,7 +24,7 @@ export default function MobileServersTableFilters() {
           <DrawerHeader>
             <DrawerTitle>Filters</DrawerTitle>
             <DrawerDescription className="sr-only">
-              Filter table results by review score
+              Filter table results
             </DrawerDescription>
           </DrawerHeader>
           <RatingFilter />

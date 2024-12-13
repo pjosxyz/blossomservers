@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { MAX_RATING } from "@/consts";
+import { MAX_RATING } from "@/const";
 import { cn, range } from "@/lib/utils";
 import { Star } from "lucide-react";
 import FilterCard from "@/components/servers-table/components/filters/filter-card";
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 
 export default function RatingFilter() {
   const { handleRatingFilterChange, rating } = useTable();

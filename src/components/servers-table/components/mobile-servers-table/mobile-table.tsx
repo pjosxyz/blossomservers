@@ -1,4 +1,4 @@
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 import MobileDataCard from "./mobile-data-card";
 import MobileServersTableFilters from "./mobile-servers-filters";
 

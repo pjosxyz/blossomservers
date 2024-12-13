@@ -7,7 +7,7 @@ export default function ActionButtons() {
       <Button variant="link">
         Open <SquareArrowOutUpRight />
       </Button>
-      <Button>Add review</Button>
+      <Button variant="secondary">Add review</Button>
     </>
   );
 }

@@ -19,14 +19,14 @@ export default function AddServerForm() {
       domain: "",
       description: "",
       isPaid: false,
-      isWhiteList: false,
+      hasWhitelist: false,
     },
     mode: "all",
   });
 
   async function onSubmit(values: z.infer<typeof addServerFormSchema>) {
     const url = new URL("/", values.domain).toString();
-    console.log(String(values.isWhiteList));
+    console.log(String(values.hasWhitelist));
 
     // rxNostr.send({
     //   kind: SERVER_ADVERTIZEMENT_KIND,
@@ -112,9 +112,9 @@ export default function AddServerForm() {
         />
         <FormField
           control={form.control}
-          name="isWhiteList"
+          name="hasWhitelist"
           render={({ field }) => (
-            <FormItem className="flex flex-col ">
+            <FormItem className="flex flex-col">
               <div className="grid grid-cols-[1fr_2.5fr] space-y-0">
                 <FormLabel className="text-gray-600 font-md">Server has a white list</FormLabel>
                 <FormControl>

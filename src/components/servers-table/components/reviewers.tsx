@@ -1,4 +1,4 @@
-import { MAX_REVIEWER_USERNAMES } from "@/consts";
+import { MAX_REVIEWER_USERNAMES } from "@/const";
 import { ReviewersProps } from "./mobile-servers-table/types";
 
 export default function Reviewers({ reviewedBy }: ReviewersProps) {

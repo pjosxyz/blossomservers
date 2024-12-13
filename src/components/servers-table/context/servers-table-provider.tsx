@@ -1,4 +1,4 @@
-import { DEFAULT_ITEMS_PER_PAGE } from "@/consts";
+import { DEFAULT_ITEMS_PER_PAGE } from "@/const";
 import {
   ColumnFiltersState,
   getCoreRowModel,
@@ -8,7 +8,7 @@ import {
 } from "@tanstack/react-table";
 import { PropsWithChildren, useState } from "react";
 import { ServersTableProps } from "../types";
-import { TableContext } from "./table-context";
+import { ServersTableContext } from "./servers-table-context";
 
 /**
  * Provides the context for the ServersTable component.
@@ -16,7 +16,7 @@ import { TableContext } from "./table-context";
  * @param {PropsWithChildren<ServersTableProps>} props - The props for the component.
  * @returns The JSX element for the component.
  */
-export function TableProvider({
+export function ServersTableProvider({
   children,
   data,
   columns,
@@ -171,6 +171,6 @@ export function TableProvider({
   };
 
   return (
-    <TableContext.Provider value={context}>{children}</TableContext.Provider>
+    <ServersTableContext.Provider value={context}>{children}</ServersTableContext.Provider>
   );
 }

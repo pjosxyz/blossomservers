@@ -1,5 +1,5 @@
 import { Input } from "@/components/ui/input";
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 
 export default function ServerNameSearch() {
   const { serverNameFilter, handleServerNameFilterChange } = useTable();

@@ -11,7 +11,7 @@ import {
 
 import ServerNameSearch from "@/components/servers-table/components/filters/server-search";
 import DesktopTableFilters from "@/components/servers-table/components/desktop-servers-table/desktop-table-filters";
-import { useTable } from "../../hooks/use-table";
+import { useTable } from "../../hooks/use-servers-table";
 
 export default function DesktopTable() {
   const { table } = useTable();

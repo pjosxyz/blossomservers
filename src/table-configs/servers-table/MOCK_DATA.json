@@ -1,0 +1,315 @@
+[
+  {
+    "id": 1,
+    "serverDetail": {
+      "serverName": "Blossom Garden",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 4.8,
+    "reviewedBy": [
+      {
+        "id": 101,
+        "username": "satoshi_fan",
+        "address": "npub1sn0wdenxf6all6fkr02u4j9y6s9t459g9xv80s99p6m6q9v8p25qnfxk6v"
+      },
+      {
+        "id": 102,
+        "username": "nostr_dev",
+        "address": "npub1kepler0x924234fn8v4ar9j9x4n8v4qr9j9x4n8v4qr9j9x4n8v4qr9j9x"
+      }
+    ],
+    "description": "Fast and reliable Blossom server with high uptime and strong community support",
+    "url": "blossom.garden.pub/"
+  },
+  {
+    "id": 2,
+    "serverDetail": {
+      "serverName": "NostrBlob Pro",
+      "isPaidServer": true,
+      "hasWhitelist": true
+    },
+    "rating": 4.6,
+    "reviewedBy": [
+      {
+        "id": 201,
+        "username": "crypto_enthusiast",
+        "address": "npub1qwertyuiop0987654321zxcvbnm12345678901234567890qwertyuiopas"
+      }
+    ],
+    "description": "Premium blob storage with advanced security features and dedicated support",
+    "url": "nostrblobpro.com/"
+  },
+  {
+    "id": 3,
+    "serverDetail": {
+      "serverName": "CloudNostr",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 0,
+    "reviewedBy": [
+      {
+        "id": 301,
+        "username": "blockchain_user",
+        "address": "npub1zxcvbnm0987654321qwertyuiop1234567890asdfghjklzxcvbnmqwerty"
+      },
+      {
+        "id": 302,
+        "username": "web3_explorer",
+        "address": "npub1asdfghjkl0987654321zxcvbnm12345678901234567890qwertyuiopqwe"
+      }
+    ],
+    "description": "Free and open-source blob storage relay with community-driven infrastructure",
+    "url": "cloudnostr.xyz/"
+  },
+  {
+    "id": 4,
+    "serverDetail": {
+      "serverName": "SecureBlob",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 1,
+    "reviewedBy": [
+      {
+        "id": 401,
+        "username": "privacy_ninja",
+        "address": "npub1qazwsxedc0987654321rfvtgbyhnujmikolp0987654321qazwsxedcrfv"
+      }
+    ],
+    "description": "Military-grade encrypted blob storage with zero-knowledge architecture",
+    "url": "secureblob.net/"
+  },
+  {
+    "id": 5,
+    "serverDetail": {
+      "serverName": "GlobalNostr",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 3,
+    "reviewedBy": [
+      {
+        "id": 501,
+        "username": "decentralization_fan",
+        "address": "npub1mnbvcxz0987654321qwertyuiop1234567890asdfghjklmnbvcxzqwerty"
+      }
+    ],
+    "description": "Distributed blob storage with global node network and low latency",
+    "url": "globalnostr.io/"
+  },
+  {
+    "id": 6,
+    "serverDetail": {
+      "serverName": "NostrArchive",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 4.7,
+    "reviewedBy": [
+      {
+        "id": 601,
+        "username": "data_historian",
+        "address": "npub1poiuytrewq0987654321lkjhgfdsamnbvcxz1234567890qwertyuioplkj"
+      },
+      {
+        "id": 602,
+        "username": "preservation_expert",
+        "address": "npub1lkjhgfds0987654321zxcvbnm12345678901234567890qwertyuiopaslkj"
+      }
+    ],
+    "description": "Long-term blob storage with historical data preservation and archival features",
+    "url": "nostrarchive.com/"
+  },
+  {
+    "id": 7,
+    "serverDetail": {
+      "serverName": "QuickBlob",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 4.4,
+    "reviewedBy": [
+      {
+        "id": 701,
+        "username": "speed_demon",
+        "address": "npub1zxcvbnm1234567890qwertyuiop0987654321asdfghjklzxcvbnmqwerty"
+      }
+    ],
+    "description": "Lightweight and fast blob storage with minimal overhead and quick uploads",
+    "url": "quickblob.xyz/"
+  },
+  {
+    "id": 8,
+    "serverDetail": {
+      "serverName": "NostrCloud Elite",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 4.5,
+    "reviewedBy": [
+      {
+        "id": 801,
+        "username": "enterprise_user",
+        "address": "npub1qwertyuiop1234567890zxcvbnm0987654321asdfghjklqwertyuiopzxc"
+      }
+    ],
+    "description": "Enterprise-grade blob storage with advanced compliance and data management",
+    "url": "nostrcloudelit.com/"
+  },
+  {
+    "id": 9,
+    "serverDetail": {
+      "serverName": "CommunityNostr",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 4.2,
+    "reviewedBy": [
+      {
+        "id": 901,
+        "username": "open_source_advocate",
+        "address": "npub1asdfghjkl1234567890zxcvbnm0987654321qwertyuiopasdfghjklzxcv"
+      }
+    ],
+    "description": "Community-driven blob storage platform with collaborative development",
+    "url": "communitynostr.org/"
+  },
+  {
+    "id": 10,
+    "serverDetail": {
+      "serverName": "SecureArchive Pro",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 4.8,
+    "reviewedBy": [
+      {
+        "id": 1001,
+        "username": "compliance_officer",
+        "address": "npub1zxcvbnm2345678901qwertyuiop9876543210asdfghjklzxcvbnmqwert"
+      },
+      {
+        "id": 1002,
+        "username": "data_guardian",
+        "address": "npub1qwertyuiop2345678901zxcvbnm9876543210asdfghjklqwertyuiopxcv"
+      }
+    ],
+    "description": "High-security blob storage with regulatory compliance and advanced encryption",
+    "url": "securearchivepro.net/"
+  },
+  {
+    "id": 11,
+    "serverDetail": {
+      "serverName": "EcoNostr",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 4.0,
+    "reviewedBy": [
+      {
+        "id": 1101,
+        "username": "green_tech_lover",
+        "address": "npub1lkjhgfds2345678901zxcvbnm9876543210qwertyuiopaslkjhgfdszxcv"
+      }
+    ],
+    "description": "Environmentally friendly blob storage using renewable energy infrastructure",
+    "url": "econostr.green/"
+  },
+  {
+    "id": 12,
+    "serverDetail": {
+      "serverName": "NostrEdge",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 4.6,
+    "reviewedBy": [
+      {
+        "id": 1201,
+        "username": "tech_innovator",
+        "address": "npub1qazwsxedc2345678901rfvtgbyhnujmikolp9876543210qazwsxedcrfv"
+      }
+    ],
+    "description": "Edge computing-powered blob storage with low-latency global distribution",
+    "url": "nostredge.cloud/"
+  },
+  {
+    "id": 13,
+    "serverDetail": {
+      "serverName": "OpenNostr",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 4.3,
+    "reviewedBy": [
+      {
+        "id": 1301,
+        "username": "decentralization_maximalist",
+        "address": "npub1mnbvcxz2345678901qwertyuiop9876543210asdfghjklmnbvcxzqwerty"
+      }
+    ],
+    "description": "Fully open-source and transparent blob storage with community governance",
+    "url": "opennostr.io/"
+  },
+  {
+    "id": 14,
+    "serverDetail": {
+      "serverName": "NostrVault",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 2,
+    "reviewedBy": [
+      {
+        "id": 1401,
+        "username": "security_researcher",
+        "address": "npub1poiuytrewq2345678901lkjhgfdsamnbvcxz9876543210qwertyuioplkj"
+      },
+      {
+        "id": 1402,
+        "username": "cryptography_expert",
+        "address": "npub1lkjhgfds2345678901zxcvbnm9876543210qwertyuiopaslkjhgfdszxcv"
+      }
+    ],
+    "description": "High-security blob storage with advanced cryptographic protection and key management",
+    "url": "nostrvault.security/"
+  },
+  {
+    "id": 15,
+    "serverDetail": {
+      "serverName": "NostrLite",
+      "isPaidServer": false,
+      "hasWhitelist": false
+    },
+    "rating": 3,
+    "reviewedBy": [
+      {
+        "id": 1501,
+        "username": "minimalist_user",
+        "address": "npub1zxcvbnm3456789012qwertyuiop8765432109asdfghjklzxcvbnmqwerty"
+      }
+    ],
+    "description": "Lightweight and minimalist blob storage solution for resource-constrained environments",
+    "url": "nostrlit.xyz/"
+  },
+  {
+    "id": 16,
+    "serverDetail": {
+      "serverName": "GlobalSecureNostr",
+      "isPaidServer": true,
+      "hasWhitelist": false
+    },
+    "rating": 1,
+    "reviewedBy": [
+      {
+        "id": 1601,
+        "username": "international_user",
+        "address": "npub1qwertyuiop3456789012zxcvbnm8765432109asdfghjklqwertyuiopxcv"
+      }
+    ],
+    "description": "Global enterprise-grade blob storage with multi-region redundancy and compliance",
+    "url": "globalsecurenostr.com/"
+  }
+]
