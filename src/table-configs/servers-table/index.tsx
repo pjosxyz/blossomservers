@@ -76,6 +76,9 @@ export const serverColumns: ColumnDef<ServerData>[] = [
   {
     accessorKey: "actions",
     header: "Actions",
-    cell: () => <ActionButtons />,
+    cell: ({ row }) => {
+      const url = row.original.url;
+      return <ActionButtons url={url} />;
+    },
   },
 ];

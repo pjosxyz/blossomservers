@@ -35,7 +35,7 @@ export default function AddServerForm() {
     //     ["d", url],
     //     ["name", values.name],
     //     ["isPaid", String(values.isPaid)],
-    //     ["isWhiteList", String(values.isWhiteList)],
+    //     ["hasWhitelist", String(values.hasWhitelist)],
     //   ],
     // });
   }
@@ -147,45 +147,3 @@ export default function AddServerForm() {
   );
 }
 
-/**
- * Checkbox 
- * 
- *  <FormField
-          control={form.control}
-          name="isWhiteList"
-          render={({ field }) => (
-            <FormItem className="flex flex-col my-12">
-              <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel>This is a paid server</FormLabel>
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    className="bg-gray-100 border checked:border-none border-gray-400 size-5 rounded-md"
-                  />
-                </FormControl>
-              </div>
-              <FormDescription>Users must pay to use server</FormDescription>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="isWhiteList"
-          render={({ field }) => (
-            <FormItem className="flex flex-col my-12">
-              <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel>This server has a white list</FormLabel>
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    className="bg-gray-100 border checked:border-none border-gray-400 size-5 rounded-md"
-                  />
-                </FormControl>
-              </div>
-              <FormDescription>Users need to be approved before they can use the server</FormDescription>
-            </FormItem>
-          )}
-        />
- */

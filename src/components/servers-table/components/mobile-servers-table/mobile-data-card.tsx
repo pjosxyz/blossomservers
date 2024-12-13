@@ -1,34 +1,17 @@
 import StarRating from "@/components/star-rating";
 import { MobileRowProps } from "@/types";
 import { PropsWithChildren } from "react";
-import {
-  BodyProps,
-  CellProps,
-} from "@/components/servers-table/components/mobile-servers-table/types";
+import { BodyProps, CellProps } from "@/components/servers-table/components/mobile-servers-table/types";
 import Reviewers from "@/components/servers-table/components/reviewers";
 import ActionButtons from "../action-buttons";
 import CopyURLButton from "../copy-url-button";
 import ServerDetail from "../server-detail";
 import { ServerDetail as ServerDetailProps } from "@/types";
-function MobileDataCard({
-  serverDetail,
-  rating,
-  reviewedBy,
-  description,
-  url,
-}: MobileRowProps) {
+function MobileDataCard({ serverDetail, rating, reviewedBy, description, url }: MobileRowProps) {
   return (
     <article className="text-sm border border-gray-300 bg-white shadow-sm rounded-md shrink-0 overflow-hidden">
-      <Header
-        serverDetail={serverDetail}
-        rating={rating}
-        numReviews={reviewedBy.length}
-      />
-      <Body
-        reviewedBy={reviewedBy}
-        description={description}
-        url={url}
-      />
+      <Header serverDetail={serverDetail} rating={rating} numReviews={reviewedBy.length} />
+      <Body reviewedBy={reviewedBy} description={description} url={url} />
       <Footer />
     </article>
   );
@@ -53,7 +36,11 @@ function Header({
 }) {
   return (
     <header className=" px-3 py-3 border-b  border-gray-200 flex items-center justify-between">
-       <ServerDetail serverName={serverDetail.serverName} hasWhitelist={serverDetail.hasWhitelist} isPaidServer={serverDetail.isPaidServer} />
+      <ServerDetail
+        serverName={serverDetail.serverName}
+        hasWhitelist={serverDetail.hasWhitelist}
+        isPaidServer={serverDetail.isPaidServer}
+      />
 
       <div className="text-xs flex items-center gap-1 text-gray-500">
         <StarRating serverRating={rating} />

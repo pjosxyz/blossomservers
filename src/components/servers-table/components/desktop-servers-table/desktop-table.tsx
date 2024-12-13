@@ -16,7 +16,7 @@ import { useTable } from "../../hooks/use-servers-table";
 export default function DesktopTable() {
   const { table } = useTable();
   return (
-    <div className="hidden lg:block">
+    <div className="hidden lg:block ">
       <div className="flex items-center justify-between mb-4">
         <ServerNameSearch />
         <DesktopTableFilters />
@@ -43,15 +43,9 @@ export default function DesktopTable() {
             {table.getRowModel().rows.map((row) => (
               <TableRow key={row.id}>
                 {row.getVisibleCells().map((cell, index) => (
-                  <TableCell
-                    key={cell.id}
-                    className={index > 0 ? "border-l border-gray-300" : ""}
-                  >
+                  <TableCell key={cell.id} className={index > 0 ? "border-l border-gray-300" : ""}>
                     <div className="flex flex-col gap-3">
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </div>
                   </TableCell>
                 ))}

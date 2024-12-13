@@ -2,25 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: "Geist Sans";  
-  src: url('/src/assets/fonts/Geist-Regular.woff2') format('woff2');
+  font-family: "Geist Sans";
+  src: url("/src/assets/fonts/Geist-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Geist Sans Medium";  
-  src: url('/src/assets/fonts/Geist-Medium.woff2') format('woff2');
+  font-family: "Geist Sans Medium";
+  src: url("/src/assets/fonts/Geist-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 @font-face {
-  font-family: "Geist Sans Semibold";  
-  src: url('/src/assets/fonts/Geist-Semibold.woff2') format('woff2');
+  font-family: "Geist Sans Semibold";
+  src: url("/src/assets/fonts/Geist-Semibold.woff2") format("woff2");
   font-weight: 600;
 }
 @font-face {
-  font-family: "Geist Sans Mono";  
-  src: url('/src/assets/fonts/GeistMono-Regular.woff2') format('woff2');
+  font-family: "Geist Sans Mono";
+  src: url("/src/assets/fonts/GeistMono-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 
@@ -87,6 +86,13 @@
     @apply bg-background text-foreground;
   }
 }
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: "Geist Sans", sans-serif;
+}
+main {
+  height: 100%;
 }
