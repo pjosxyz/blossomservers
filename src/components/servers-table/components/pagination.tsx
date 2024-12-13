@@ -7,7 +7,7 @@ const {table, handleItemsPerPageChange, itemsPerPage } = useTable()
   return (
     <div className="flex justify-between flex-end px-2 sm:px-4 lg:px-0">
       <div className="flex items-center gap-2">
-        <p className="text-sm grow-1 text-slate-600 whitespace-nowrap hidden sm:block">
+        <p className="text-sm grow-1 text-gray-600 whitespace-nowrap hidden sm:block">
           Items per page:
         </p>
         <Select onValueChange={handleItemsPerPageChange}>

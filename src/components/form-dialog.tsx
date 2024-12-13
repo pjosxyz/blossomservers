@@ -25,8 +25,8 @@ export function FormDialog({ triggerLabel, title, description, footer, children 
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
-          <DialogTitle className="font-semi text-slate-800">{title}</DialogTitle>
-          <DialogDescription className="text-slate-600 text-base">{description}</DialogDescription>
+          <DialogTitle className="font-semi text-gray-800">{title}</DialogTitle>
+          <DialogDescription className="text-gray-600 text-base">{description}</DialogDescription>
         </DialogHeader>
         {children}
         <DialogFooter>{footer}</DialogFooter>

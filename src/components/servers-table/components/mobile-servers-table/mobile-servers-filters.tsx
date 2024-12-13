@@ -17,7 +17,7 @@ export default function MobileServersTableFilters() {
       <ServerNameSearch
       />
       <Drawer>
-        <DrawerTrigger className="bg-white rounded-lg flex gap-1 items-center min-h-10 border border-slate-300 shadow-sm px-3 px-1-5">
+        <DrawerTrigger className="bg-white rounded-lg flex gap-1 items-center min-h-10 border border-gray-300 shadow-sm px-3 px-1-5">
           <SlidersHorizontal size={16} />
         </DrawerTrigger>
         <DrawerContent>

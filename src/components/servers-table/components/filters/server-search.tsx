@@ -6,7 +6,7 @@ export default function ServerNameSearch() {
   return (
     <Input
       placeholder="Filter by server name"
-      className="max-w-96 border border-slate-300"
+      className="max-w-96 border border-gray-300"
       value={serverNameFilter}
       onChange={(e) => handleServerNameFilterChange(e.target.value)}
       // onChange={(e) => console.log(e.target.value)}

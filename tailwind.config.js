@@ -1,17 +1,30 @@
-import { slate } from "tailwindcss/colors";
+import { slate, white, black, red, blue } from "tailwindcss/colors";
+
+/**
+ * I've set theme to slate.
+ * Just change gray: <preferred-color>
+ * to change app-wide
+ */
 
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
+    colors: {
+      gray: slate,
+      white,
+      black,
+      red,
+      blue,
+    },
+    fontFamily: {
+      sans: ["Geist Sans", "sans-serif"],
+      md: ["Geist Sans Medium", "sans-serif"],
+      semi: ["Geist Sans Semibold", "sans-serif"],
+      mono: ["Geist Sans Mono", "monospace"],
+    },
     extend: {
-      fontFamily: {
-        sans: ["Geist Sans", "sans-serif"],
-        md: ["Geist Sans Medium", "sans-serif"],
-        semi: ["Geist Sans Semibold", "sans-serif"],
-        mono: ["Geist Sans Mono", "monospace"],
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -58,7 +71,6 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
-        gray: slate,
       },
     },
   },

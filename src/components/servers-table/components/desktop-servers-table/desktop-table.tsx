@@ -21,16 +21,16 @@ export default function DesktopTable() {
         <ServerNameSearch />
         <DesktopTableFilters />
       </div>
-      <div className="rounded-xl border border-slate-300 overflow-hidden">
+      <div className="rounded-xl border border-gray-300 overflow-hidden">
         <Table>
-          <TableHeader className="bg-slate-50">
+          <TableHeader className="bg-gray-50">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((headers, index) => (
                   <TableHead
                     key={headers.id}
                     // first cell doesn't get a border-left
-                    className={index > 0 ? "border-l border-slate-300" : ""}
+                    className={index > 0 ? "border-l border-gray-300" : ""}
                   >
                     {/* TableHead children typed as React.Node so wrapped in fragment */}
                     <>{headers.column.columnDef.header}</>
@@ -45,7 +45,7 @@ export default function DesktopTable() {
                 {row.getVisibleCells().map((cell, index) => (
                   <TableCell
                     key={cell.id}
-                    className={index > 0 ? "border-l border-slate-300" : ""}
+                    className={index > 0 ? "border-l border-gray-300" : ""}
                   >
                     <div className="flex flex-col gap-3">
                       {flexRender(

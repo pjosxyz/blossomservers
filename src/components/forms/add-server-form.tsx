@@ -48,7 +48,7 @@ export default function AddServerForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 font-md">Server name</FormLabel>
+              <FormLabel className="text-gray-700 font-md">Server name</FormLabel>
               <FormControl>
                 <Input placeholder="server" {...field} />
               </FormControl>
@@ -60,7 +60,7 @@ export default function AddServerForm() {
           name="domain"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 font-md">Domain</FormLabel>
+              <FormLabel className="text-gray-700 font-md">Domain</FormLabel>
               <FormControl>
                 <Input placeholder="Example: https://server.blossom.com" {...field} />
               </FormControl>
@@ -72,7 +72,7 @@ export default function AddServerForm() {
           name="description"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 font-md">Server Description</FormLabel>
+              <FormLabel className="text-gray-700 font-md">Server Description</FormLabel>
               <FormControl>
                 <Textarea placeholder="Example: https://server.blossom.com" {...field} />
               </FormControl>
@@ -85,7 +85,7 @@ export default function AddServerForm() {
           render={({ field }) => (
             <FormItem className="flex flex-col my-12">
               <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel className="text-slate-700 font-md">This is a paid server</FormLabel>
+                <FormLabel className="text-gray-700 font-md">This is a paid server</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={(value) => field.onChange(value === "yes")}
@@ -116,7 +116,7 @@ export default function AddServerForm() {
           render={({ field }) => (
             <FormItem className="flex flex-col my-12">
               <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel className="text-slate-700 font-md">This server has a white list</FormLabel>
+                <FormLabel className="text-gray-700 font-md">This server has a white list</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={(value) => field.onChange(value === "yes")}
@@ -161,7 +161,7 @@ export default function AddServerForm() {
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
-                    className="bg-slate-100 border checked:border-none border-slate-400 size-5 rounded-md"
+                    className="bg-gray-100 border checked:border-none border-gray-400 size-5 rounded-md"
                   />
                 </FormControl>
               </div>
@@ -180,7 +180,7 @@ export default function AddServerForm() {
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
-                    className="bg-slate-100 border checked:border-none border-slate-400 size-5 rounded-md"
+                    className="bg-gray-100 border checked:border-none border-gray-400 size-5 rounded-md"
                   />
                 </FormControl>
               </div>

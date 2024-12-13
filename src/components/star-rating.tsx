@@ -11,7 +11,7 @@ function StarRating({ serverRating }: { serverRating: number }) {
           className={
             index < rating
               ? "fill-amber-500 stroke-none"
-              : " fill-slate-400 stroke-none"
+              : " fill-gray-400 stroke-none"
           }
           // fill={index < rating ? "gold" : "none"}
         />

@@ -31,13 +31,13 @@ export function HelpDialog() {
           servers
         </p>
 
-        <div className="bg-slate-100 rounded-lg w-full h-[200px]"></div>
+        <div className="bg-gray-100 rounded-lg w-full h-[200px]"></div>
 
         <div className="grid lg:grid-cols-2 gap-3">
           <KindExplainer>
             <p>
               Servers are a{" "}
-              <code className="font-mono bg-slate-200 px-1 py-0.5 rounded-md ">
+              <code className="font-mono bg-gray-200 px-1 py-0.5 rounded-md ">
                 kind:{SERVER_ADVERTIZEMENT_KIND}
               </code>{" "}
               event with a "<code>d</code>" tag containing the server URL
@@ -47,7 +47,7 @@ export function HelpDialog() {
             <p>
               Reviews are a{" "}
               
-              <code className="font-mono bg-slate-200 px-2 py-0.5  rounded-md">kind:{SERVER_REVIEW_KIND}</code>{" "}
+              <code className="font-mono bg-gray-200 px-2 py-0.5  rounded-md">kind:{SERVER_REVIEW_KIND}</code>{" "}
               event with a "<code>d</code>" tag containing the server URL and following{" "}
               <a
                 href="https://github.com/nostr-protocol/nips/pull/879"
@@ -88,10 +88,10 @@ export function HelpDialog() {
               href="https://github.com/hzrd149/blossomservers"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 bg-slate-100 self-start inline-block"
+              className="text-blue-500 bg-gray-100 self-start inline-block"
             >
               View on GitHub
-              <GHLogoIcon className="size-5 fill-slate-700" />
+              <GHLogoIcon className="size-5 fill-gray-700" />
             </a>
           </Button>
         </footer>
@@ -100,7 +100,7 @@ export function HelpDialog() {
   );
 }
 function KindExplainer({ children }: { children: ReactNode }) {
-  return <article className="border-slate-200 bg-slate-50 border text-slate-800 p-3 rounded-lg">{children}</article>;
+  return <article className="border-gray-200 bg-gray-50 border text-gray-800 p-3 rounded-lg">{children}</article>;
 }
 function GHLogoIcon({ className = "" }: { className: string }) {
   return (

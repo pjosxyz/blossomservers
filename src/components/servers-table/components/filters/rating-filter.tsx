@@ -21,7 +21,7 @@ export default function RatingFilter() {
           <Button
             key={num}
             className={cn(
-              num <= rating ? "border border-slate-400" : "",
+              num <= rating ? "border border-gray-400" : "",
               "size-9"
             )}
             onClick={() => handleRatingFilterChange(num)}
@@ -29,7 +29,7 @@ export default function RatingFilter() {
             <Star
               size={20}
               className={cn(
-                num <= rating ? "fill-amber-500" : "fill-slate-300",
+                num <= rating ? "fill-amber-500" : "fill-gray-300",
                 "stroke-none"
               )}
             />

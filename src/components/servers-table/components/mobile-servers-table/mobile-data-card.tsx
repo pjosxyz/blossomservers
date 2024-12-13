@@ -18,7 +18,7 @@ function MobileDataCard({
   url,
 }: MobileRowProps) {
   return (
-    <article className="text-sm border border-slate-300 bg-white shadow-sm rounded-md shrink-0 overflow-hidden">
+    <article className="text-sm border border-gray-300 bg-white shadow-sm rounded-md shrink-0 overflow-hidden">
       <Header
         serverDetail={serverDetail}
         rating={rating}
@@ -36,7 +36,7 @@ function MobileDataCard({
 
 function Footer() {
   return (
-    <footer className="border-l flex p-2 justify-center items-center gap-4 border-slate-200">
+    <footer className="border-l flex p-2 justify-center items-center gap-4 border-gray-200">
       <ActionButtons />
     </footer>
   );
@@ -52,10 +52,10 @@ function Header({
   numReviews: number;
 }) {
   return (
-    <header className=" px-3 py-3 border-b  border-slate-200 flex items-center justify-between">
+    <header className=" px-3 py-3 border-b  border-gray-200 flex items-center justify-between">
       <ServerDetail serverDetail={serverDetail} />
 
-      <div className="text-xs flex items-center gap-1 text-slate-500">
+      <div className="text-xs flex items-center gap-1 text-gray-500">
         <StarRating serverRating={rating} />
         {numReviews} review{numReviews > 1 || numReviews === 0 ? "s" : ""}
       </div>
@@ -71,7 +71,7 @@ function Body({ reviewedBy, description, url }: BodyProps) {
           <Reviewers reviewedBy={reviewedBy} />
         </Cell>
         <Cell label="Description">
-          <p className="text-slate-950">{description}</p>
+          <p className="text-gray-950">{description}</p>
         </Cell>
         <Cell label="URL">
           <CopyURLButton url={url} />
@@ -83,8 +83,8 @@ function Body({ reviewedBy, description, url }: BodyProps) {
 
 function Cell({ children, label }: PropsWithChildren<CellProps>) {
   return (
-    <div className="flex flex-col gap-2 p-3 border-b border-slate-300">
-      <p className="text-xs text-slate-400">{label}</p>
+    <div className="flex flex-col gap-2 p-3 border-b border-gray-300">
+      <p className="text-xs text-gray-400">{label}</p>
       {children}
     </div>
   );
