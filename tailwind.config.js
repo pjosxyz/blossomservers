@@ -1,4 +1,4 @@
-import { slate, white, black, red, blue, amber } from "tailwindcss/colors";
+import { slate, white, black, red, blue, amber, teal, green } from "tailwindcss/colors";
 
 /**
  * I've set theme to slate.
@@ -18,6 +18,8 @@ export default {
       red,
       blue,
       amber,
+      teal,
+      green
     },
     fontFamily: {
       sans: ["Geist Sans", "sans-serif"],

@@ -15,12 +15,3 @@ export default function HomeView() {
 
   return <ServersTable data={serverData} columns={serverColumns } />;
 }
-
-/**
- * TODO all the things:
- * - replace ServersTable...
- * - Shape the data to be passed to ServersTable
- * - Change header
- * - Import aliases
- * - Move table definition to its own component (currently doing it in App.tsx in other project)
- */

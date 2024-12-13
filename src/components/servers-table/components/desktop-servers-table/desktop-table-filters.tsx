@@ -7,6 +7,7 @@ import RatingFilter from "@/components/servers-table/components/filters/rating-f
 import ReviewsFilter from "../filters/reviews-filter";
 import { Button } from "@/components/ui/button";
 import { useTable } from "../../hooks/use-servers-table";
+import { Filter } from "lucide-react";
 
 export default function DesktopTableFilters() {
   const { handleResetReviewRatingFilters, rating, numReviews } = useTable();
@@ -19,12 +20,12 @@ export default function DesktopTableFilters() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button>Filters</Button>
+        <Button variant="secondary">Filters <Filter size={14} /></Button>
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col" align="end">
+      <PopoverContent className="flex flex-col border border-gray-300" align="end">
         <RatingFilter />
         <ReviewsFilter />
-        <div className="p-3 flex ">
+        <div className="flex p-6">
           <Button
             className="w-full"
             onClick={handleResetFilters}

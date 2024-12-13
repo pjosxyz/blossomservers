@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
-import { Github, HelpCircle } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 import { SERVER_ADVERTIZEMENT_KIND, SERVER_REVIEW_KIND } from "../const";
-import { PropsWithChildren, ReactNode } from "react";
+import { ReactNode } from "react";
 
 export function HelpDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="icon" variant="outline">
+        <Button variant="outline" className="w-full lg:size-10">
+          <span className="lg:hidden">About Blossom Servers</span>
           <HelpCircle size="1.2rem" />
         </Button>
       </DialogTrigger>
@@ -31,24 +32,19 @@ export function HelpDialog() {
           servers
         </p>
 
-        <div className="bg-gray-100 rounded-lg w-full h-[200px]"></div>
-
         <div className="grid lg:grid-cols-2 gap-3">
           <KindExplainer>
             <p>
               Servers are a{" "}
-              <code className="font-mono bg-gray-200 px-1 py-0.5 rounded-md ">
-                kind:{SERVER_ADVERTIZEMENT_KIND}
-              </code>{" "}
+              <code className="font-mono bg-gray-200 px-1 py-0.5 rounded-md ">kind:{SERVER_ADVERTIZEMENT_KIND}</code>{" "}
               event with a "<code>d</code>" tag containing the server URL
             </p>
           </KindExplainer>
           <KindExplainer>
             <p>
               Reviews are a{" "}
-              
-              <code className="font-mono bg-gray-200 px-2 py-0.5  rounded-md">kind:{SERVER_REVIEW_KIND}</code>{" "}
-              event with a "<code>d</code>" tag containing the server URL and following{" "}
+              <code className="font-mono bg-gray-200 px-2 py-0.5  rounded-md">kind:{SERVER_REVIEW_KIND}</code> event
+              with a "<code>d</code>" tag containing the server URL and following{" "}
               <a
                 href="https://github.com/nostr-protocol/nips/pull/879"
                 rel="noopener noreferrer"

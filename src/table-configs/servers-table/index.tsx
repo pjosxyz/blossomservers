@@ -2,6 +2,7 @@ import { ServerData } from "@/types";
 
 // dummy data
 import mData from "../servers-table/MOCK_DATA.json";
+
 import { ColumnDef } from "@tanstack/react-table";
 import ServerDetail from "@/components/servers-table/components/server-detail";
 import StarRating from "@/components/star-rating";
@@ -20,8 +21,8 @@ export const serverColumns: ColumnDef<ServerData>[] = [
     accessorKey: "serverDetail",
     header: "Server Name",
     cell: ({ row }) => {
-      const serverDetail = row.original.serverDetail;
-      return <ServerDetail serverDetail={serverDetail} />;
+      const { serverName, isPaidServer, hasWhitelist } = row.original.serverDetail;
+      return <ServerDetail serverName={serverName} hasWhitelist={hasWhitelist} isPaidServer={isPaidServer} />;
     },
     filterFn: (row, _columnId, filterValue: string) => {
       return row.original.serverDetail.serverName.toLowerCase().includes(filterValue.toLowerCase());

@@ -1,5 +1,5 @@
 import StarRating from "@/components/star-rating";
-import { MobileRowProps } from "@/components/servers-table/types";
+import { MobileRowProps } from "@/types";
 import { PropsWithChildren } from "react";
 import {
   BodyProps,
@@ -9,7 +9,7 @@ import Reviewers from "@/components/servers-table/components/reviewers";
 import ActionButtons from "../action-buttons";
 import CopyURLButton from "../copy-url-button";
 import ServerDetail from "../server-detail";
-
+import { ServerDetail as ServerDetailProps } from "@/types";
 function MobileDataCard({
   serverDetail,
   rating,
@@ -47,13 +47,13 @@ function Header({
   rating,
   numReviews,
 }: {
-  serverDetail: { serverName: string; isPaidServer: boolean };
+  serverDetail: ServerDetailProps;
   rating: number;
   numReviews: number;
 }) {
   return (
     <header className=" px-3 py-3 border-b  border-gray-200 flex items-center justify-between">
-      <ServerDetail serverDetail={serverDetail} />
+       <ServerDetail serverName={serverDetail.serverName} hasWhitelist={serverDetail.hasWhitelist} isPaidServer={serverDetail.isPaidServer} />
 
       <div className="text-xs flex items-center gap-1 text-gray-500">
         <StarRating serverRating={rating} />

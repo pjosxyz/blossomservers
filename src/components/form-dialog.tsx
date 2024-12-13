@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Plus } from "lucide-react";
 import { PropsWithChildren, ReactNode } from "react";
 
 type FormDialogProps = {
@@ -21,7 +22,7 @@ export function FormDialog({ triggerLabel, title, description, footer, children 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>{triggerLabel}</Button>
+        <Button>{triggerLabel} <Plus size="1.2rem" /></Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader className="mb-4">

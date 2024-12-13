@@ -7,6 +7,7 @@ import { useTable } from "../../hooks/use-servers-table";
 
 export default function RatingFilter() {
   const { handleRatingFilterChange, rating } = useTable();
+  
   const annotation =
     rating < 1
       ? "None selected"
@@ -24,6 +25,7 @@ export default function RatingFilter() {
               num <= rating ? "border border-gray-400" : "",
               "size-9"
             )}
+            variant="secondary"
             onClick={() => handleRatingFilterChange(num)}
           >
             <Star

@@ -5,7 +5,7 @@ import { useTable } from "../hooks/use-servers-table";
 function Pagination() {
   const { table, handleItemsPerPageChange, itemsPerPage } = useTable();
   return (
-    <div className="flex justify-between flex-end px-2 sm:px-4 lg:px-0">
+    <div className="flex justify-between flex-end px-2 sm:px-4 mb-10 lg:px-0">
       <div className="flex items-center gap-2">
         <p className="text-sm grow-1 text-gray-600 whitespace-nowrap hidden sm:block">Items per page:</p>
         <Select onValueChange={handleItemsPerPageChange}>
