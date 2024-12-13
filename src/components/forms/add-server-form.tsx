@@ -21,7 +21,7 @@ export default function AddServerForm() {
       isPaid: false,
       isWhiteList: false,
     },
-    mode: "onSubmit",
+    mode: "all",
   });
 
   async function onSubmit(values: z.infer<typeof addServerFormSchema>) {
@@ -42,15 +42,15 @@ export default function AddServerForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-gray-700 font-md">Server name</FormLabel>
+            <FormItem className="grid grid-cols-[1fr_2.5fr] space-y-0">
+              <FormLabel className="text-gray-600 font-md">Server name</FormLabel>
               <FormControl>
-                <Input placeholder="server" {...field} />
+                <Input placeholder="server" {...field} className="placeholder:text-300" />
               </FormControl>
             </FormItem>
           )}
@@ -59,10 +59,10 @@ export default function AddServerForm() {
           control={form.control}
           name="domain"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-gray-700 font-md">Domain</FormLabel>
+            <FormItem className="grid grid-cols-[1fr_2.5fr] space-y-0">
+              <FormLabel className="text-gray-600 font-md">Domain</FormLabel>
               <FormControl>
-                <Input placeholder="Example: https://server.blossom.com" {...field} />
+                <Input placeholder="Example: https://server.blossom.com" {...field} className="placeholder:text-300" />
               </FormControl>
             </FormItem>
           )}
@@ -71,10 +71,10 @@ export default function AddServerForm() {
           control={form.control}
           name="description"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-gray-700 font-md">Server Description</FormLabel>
+            <FormItem className="grid grid-cols-[1fr_2.5fr] space-y-0">
+              <FormLabel className="text-gray-600 font-md">Server Description</FormLabel>
               <FormControl>
-                <Textarea placeholder="Example: https://server.blossom.com" {...field} />
+                <Textarea placeholder="Example: https://server.blossom.com" {...field} className="placeholder:text-300" />
               </FormControl>
             </FormItem>
           )}
@@ -83,9 +83,9 @@ export default function AddServerForm() {
           control={form.control}
           name="isPaid"
           render={({ field }) => (
-            <FormItem className="flex flex-col my-12">
-              <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel className="text-gray-700 font-md">This is a paid server</FormLabel>
+            <FormItem className="flex flex-col ">
+              <div className="grid grid-cols-[1fr_2.5fr] space-y-0">
+                <FormLabel className="text-gray-600 font-md">This is a paid server</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={(value) => field.onChange(value === "yes")}
@@ -114,9 +114,9 @@ export default function AddServerForm() {
           control={form.control}
           name="isWhiteList"
           render={({ field }) => (
-            <FormItem className="flex flex-col my-12">
-              <div className="flex gap-2 justify-between items-center space-y-0 w-full">
-                <FormLabel className="text-gray-700 font-md">This server has a white list</FormLabel>
+            <FormItem className="flex flex-col ">
+              <div className="grid grid-cols-[1fr_2.5fr] space-y-0">
+                <FormLabel className="text-gray-600 font-md">Server has a white list</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={(value) => field.onChange(value === "yes")}
