@@ -2,7 +2,6 @@ import { getEventUID } from "applesauce-core/helpers";
 import { TimelineQuery } from "applesauce-core/queries";
 import { useStoreQuery } from "applesauce-react/hooks";
 
-import Header from "@/components/layout/header";
 import { Table, TableBody, TableCaption, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { SERVER_REVIEW_KIND } from "@/const";
 import useSubscription from "@/hooks/use-subscription";
@@ -15,7 +14,6 @@ export default function ReviewsView() {
 
   return (
     <>
-      <Header />
 
       <Table>
         <TableCaption>Recent server reviews</TableCaption>

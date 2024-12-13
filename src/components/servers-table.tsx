@@ -61,6 +61,7 @@ function ServersTable({ servers }: { servers: Servers }) {
 type ServerRowProps = { server: NostrEvent; isMobile: boolean; rowBackgroundColor: string };
 
 function ServerRow({ server, isMobile, rowBackgroundColor }: ServerRowProps) {
+  // TODO: Move this to a hook
   const url = useMemo(() => new URL(getTagValue(server, "d")!), []);
   const reviews = useStoreQuery(TimelineQuery, [{ kinds: [SERVER_REVIEW_KIND], "#d": [url.toString()] }]);
 

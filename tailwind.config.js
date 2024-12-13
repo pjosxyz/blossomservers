@@ -1,9 +1,17 @@
+import { slate } from "tailwindcss/colors";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Geist Sans", "sans-serif"],
+        md: ["Geist Sans Medium", "sans-serif"],
+        semi: ["Geist Sans Semibold", "sans-serif"],
+        mono: ["Geist Sans Mono", "monospace"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -50,6 +58,7 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        gray: slate,
       },
     },
   },

@@ -1,28 +1,32 @@
-import iconSrc from "@/assets/icon.png";
 import { HelpDialog } from "../help-dialog";
-import { AddServer } from "../add-server";
+import { FormDialog } from "../form-dialog";
 import { Link } from "react-router-dom";
+import blossomLogo from "@/assets/logo.svg";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AddServerForm from "../forms/add-server-form";
 
 export default function Header() {
   return (
-    <div className="flex gap-2 items-center p-2 w-full">
-      <img src={iconSrc} className="w-16" />
-      <div>
-        <h1 className="text-4xl">Blossom Servers</h1>
-        <div className="flex gap-2 ">
-          <Link to="/" className="hover:underline p-1">
-            Servers
-          </Link>
-          <Link to="/reviews" className="hover:underline p-1">
-            Reviews
-          </Link>
-        </div>
-      </div>
-
-      <div className="ms-auto flex gap-2">
+    <header className="flex justify-between items-center px-2 sm:px-4 lg:px-0 py-3">
+      <img src={blossomLogo} width={180} alt="Blossom Servers Review Site" />
+      <Tabs defaultValue="servers">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="servers">
+            <Link to="/">Servers</Link>
+          </TabsTrigger>
+          <TabsTrigger value="reviews">
+            <Link to="/reviews">Reviews</Link>
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="servers">{/* <ServersTable data={data} columns={columns} /> */}</TabsContent>
+        <TabsContent value="reviews">List of reviews in a table</TabsContent>
+      </Tabs>
+      <div className="flex gap-2">
         <HelpDialog />
-        <AddServer />
+        <FormDialog triggerLabel="Add server" title="Add server" description="Advertise your blossom server and stuff">
+          <AddServerForm />
+        </FormDialog>
       </div>
-    </div>
+    </header>
   );
 }

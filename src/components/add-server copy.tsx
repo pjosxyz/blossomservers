@@ -28,6 +28,7 @@ export function AddServer() {
 
   const submit = form.handleSubmit(async (values) => {
     const url = new URL("/", values.domain).toString();
+    console.log(url);
 
     rxNostr.send({
       kind: SERVER_ADVERTIZEMENT_KIND,
@@ -35,6 +36,7 @@ export function AddServer() {
       tags: [
         ["d", url],
         ["name", values.name],
+        
       ],
     });
   });

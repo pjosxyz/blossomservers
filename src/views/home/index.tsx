@@ -13,11 +13,14 @@ export default function HomeView() {
 
   const servers = useStoreQuery(TimelineQuery, [{ kinds: [SERVER_ADVERTIZEMENT_KIND] }]);
 
-  return (
-    <>
-      <Header />
-
-      <ServersTable servers={servers} />
-    </>
-  );
+  return <>{/* <ServersTable servers={servers} /> */}</>;
 }
+
+/**
+ * TODO all the things:
+ * - replace ServersTable...
+ * - Shape the data to be passed to ServersTable
+ * - Change header
+ * - Import aliases
+ * - Move table definition to its own component (currently doing it in App.tsx in other project)
+ */
